@@ -30,7 +30,7 @@ python3 -m http.server 8000
 
 ## Design guardrails
 - Palette pulled from the logo: deep navy/teal (`--deep` #081a26) with brass accent (`--brass` #c8a978). No purple, no generic SaaS gradients.
-- Typography: Cormorant Garamond (serif, display) + Inter (sans, body), both from Google Fonts.
+- Typography: Cormorant Garamond (serif, display) + Inter (sans, body). **Self-hosted** as variable woff2 under `assets/fonts/` (latin subset, weights 300–500, plus a separate 300-italic face for the display italic). Both preloaded from `index.html` — if you add new weights or styles, preload them too.
 - Heritage watch-brand tone: understated, no emoji, no inspirational copy, no AI-sounding hype.
 - Mobile-first; verified at 390px. Nav collapses to brand + Waitlist CTA under 640px.
 - Respects `prefers-reduced-motion` — the hero's drift + scroll-hint animations switch off.
