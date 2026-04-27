@@ -162,10 +162,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     border-bottom: 1px solid var(--line-soft);
   }
   .nav__links a:last-child { border-bottom: none; }
-  .nav__cta {
-    margin-top: 14px;
-    align-self: flex-start;
+  .nav__links .nav__cta {
+    border: 0;
+    border-radius: 0;
+    padding: 14px 4px;
+    margin: 0;
+    background: transparent;
+    color: var(--brass) !important;
   }
+  .nav__links .nav__cta:hover { background: transparent; border: 0; }
 }
 
 /* ---------- Hero ---------- */
