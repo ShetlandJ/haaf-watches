@@ -382,7 +382,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 /* ---------- A/B switcher ---------- */
 .ab-switch {
-  position: fixed; top: 14px; right: 14px; z-index: 30;
+  position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 30;
   display: inline-flex; align-items: center; gap: 6px;
   padding: 6px 8px;
   background: rgba(6, 17, 26, 0.7);
