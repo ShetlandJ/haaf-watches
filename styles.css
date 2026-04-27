@@ -99,8 +99,73 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   transition: border-color .2s ease, background .2s ease;
 }
 .nav__cta:hover { border-color: var(--brass); background: rgba(200,169,120,0.08); }
+
+.nav__toggle {
+  display: none;
+  width: 40px; height: 40px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  align-items: center; justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.nav__toggle:hover { border-color: var(--brass); }
+.nav__toggle__bars {
+  position: relative;
+  width: 16px; height: 10px;
+}
+.nav__toggle__bars::before,
+.nav__toggle__bars::after,
+.nav__toggle__bars span {
+  content: ""; position: absolute; left: 0; right: 0; height: 1.5px;
+  background: currentColor; border-radius: 2px;
+  transition: transform .2s ease, opacity .15s ease, top .2s ease;
+}
+.nav__toggle__bars::before { top: 0; }
+.nav__toggle__bars span { top: 50%; transform: translateY(-50%); }
+.nav__toggle__bars::after { top: 100%; transform: translateY(-100%); }
+.nav[data-open="true"] .nav__toggle__bars::before {
+  top: 50%; transform: translateY(-50%) rotate(45deg);
+}
+.nav[data-open="true"] .nav__toggle__bars span { opacity: 0; }
+.nav[data-open="true"] .nav__toggle__bars::after {
+  top: 50%; transform: translateY(-50%) rotate(-45deg);
+}
+
 @media (max-width: 640px) {
-  .nav__links a:not(.nav__cta) { display: none; }
+  .nav { flex-wrap: wrap; }
+  .nav__toggle { display: inline-flex; }
+  .nav__links {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .25s ease, opacity .2s ease, margin-top .25s ease, padding-top .25s ease;
+  }
+  .nav[data-open="true"] .nav__links {
+    max-height: 60vh;
+    opacity: 1;
+  }
+  .nav__links a {
+    width: 100%;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav__links a:last-child { border-bottom: none; }
+  .nav__cta {
+    margin-top: 14px;
+    align-self: flex-start;
+  }
 }
 
 /* ---------- Hero ---------- */

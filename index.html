@@ -25,12 +25,15 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav" role="banner">
+  <header class="nav" role="banner" data-open="false">
     <a class="nav__brand" href="#top" aria-label="Haaf Watches — home">
       <img src="assets/logo.png" alt="" width="36" height="36" />
       <span>Haaf</span>
     </a>
-    <nav class="nav__links" aria-label="Primary">
+    <button class="nav__toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Menu">
+      <span class="nav__toggle__bars" aria-hidden="true"><span></span></span>
+    </button>
+    <nav id="primary-nav" class="nav__links" aria-label="Primary">
       <a href="#story">Story</a>
       <a href="#craft">Craft</a>
       <a href="#commission">Commissions</a>
@@ -212,6 +215,25 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navHeader = document.querySelector('.nav');
+    const navToggle = navHeader?.querySelector('.nav__toggle');
+    if (navHeader && navToggle) {
+      const setOpen = (open) => {
+        navHeader.dataset.open = open ? 'true' : 'false';
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+      };
+      navToggle.addEventListener('click', () => {
+        setOpen(navHeader.dataset.open !== 'true');
+      });
+      navHeader.querySelectorAll('.nav__links a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navHeader.dataset.open === 'true') setOpen(false);
+      });
+    }
 
     const form = document.querySelector('.waitlist__form');
     const msg = form?.querySelector('.waitlist__msg');
