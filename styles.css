@@ -420,6 +420,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .hero--photo .hero__inner,
 .hero--diptych .hero__inner { z-index: 2; }
+.hero--photo .hero__title,
+.hero--diptych .hero__title { text-shadow: 0 2px 24px rgba(4,12,20,0.55); }
+.hero--photo .hero__sub,
+.hero--diptych .hero__sub {
+  color: var(--ink);
+  text-shadow: 0 1px 12px rgba(4,12,20,0.85), 0 0 2px rgba(4,12,20,0.6);
+}
+.hero--photo .eyebrow,
+.hero--diptych .eyebrow { text-shadow: 0 1px 8px rgba(4,12,20,0.6); }
 
 .hero--diptych .hero__halves {
   position: absolute; inset: 0; z-index: 0;
