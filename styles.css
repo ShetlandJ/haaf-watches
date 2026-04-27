@@ -380,27 +380,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .waitlist__fallback a { color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 1px; }
 .waitlist__fallback a:hover { border-color: var(--brass); }
 
-/* ---------- A/B switcher ---------- */
-.ab-switch {
-  position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 30;
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 8px;
-  background: rgba(6, 17, 26, 0.7);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--ink-mute);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-}
-.ab-switch a {
-  width: 22px; height: 22px;
-  display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 999px;
-  color: var(--ink-dim);
-}
-.ab-switch a.is-active { background: var(--brass); color: #1a1306; }
-.ab-switch a:hover:not(.is-active) { color: var(--ink); }
-
 /* ---------- Hero with photography ---------- */
 .hero--photo .hero__bg,
 .hero--diptych .hero__bg { display: none; }

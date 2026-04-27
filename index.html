@@ -10,12 +10,13 @@
   <meta property="og:title" content="Haaf Watches" />
   <meta property="og:description" content="Shetland-born timepieces, drawn from the haaf — the deep sea beyond the coast." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:image" content="assets/photos/black-seaweed.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
 
+  <link rel="preload" href="assets/photos/black-seaweed.jpg" as="image" fetchpriority="high" />
   <link rel="preload" href="assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
 
@@ -32,16 +33,16 @@
     <nav class="nav__links" aria-label="Primary">
       <a href="#story">Story</a>
       <a href="#craft">Craft</a>
-      <a href="#collection">Collection</a>
+      <a href="#commission">Commissions</a>
+      <a href="#collection">Pelagic</a>
       <a href="#waitlist" class="nav__cta">Waitlist</a>
     </nav>
   </header>
 
   <main id="main">
-    <section id="top" class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__grain"></div>
-      </div>
+    <section id="top" class="hero hero--photo" aria-labelledby="hero-title">
+      <img class="hero__photo" src="assets/photos/black-seaweed.jpg" alt="" width="1600" height="1067" fetchpriority="high" decoding="async" />
+      <div class="hero__veil" aria-hidden="true"></div>
       <div class="hero__inner">
         <p class="eyebrow">Shetland, 60.1°N</p>
         <h1 id="hero-title" class="hero__title">
@@ -87,38 +88,94 @@
       <div class="section__inner">
         <p class="eyebrow">Principles</p>
         <h2 id="craft-title" class="section__title">Made the long way.</h2>
-        <ul class="pillars">
+        <ul class="pillars pillars--imaged">
           <li>
-            <h3>Considered</h3>
-            <p>Small batches. Every piece drawn, prototyped and tuned in Shetland before a single case is cut.</p>
+            <img class="pillar__photo" src="assets/photos/black-workshop.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1067" />
+            <div class="pillar__body">
+              <h3>Considered</h3>
+              <p>Small batches. Every piece drawn, prototyped and tuned in Shetland before a single case is cut.</p>
+            </div>
           </li>
           <li>
-            <h3>Capable</h3>
-            <p>Built for real weather. Sapphire crystal, screw-down crown, 200m water resistance, luminous hands you can read at three a.m.</p>
+            <img class="pillar__photo" src="assets/photos/black-wrist-hawse.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1067" />
+            <div class="pillar__body">
+              <h3>Capable</h3>
+              <p>Built for real weather. Sapphire crystal, screw-down crown, 200m water resistance, luminous hands you can read at three a.m.</p>
+            </div>
           </li>
           <li>
-            <h3>Honest</h3>
-            <p>Swiss automatic movements, solid steel, no shortcuts, no marketing theatre. A watch you can hand on.</p>
+            <img class="pillar__photo" src="assets/photos/wrist-helm-bw.jpg" alt="" loading="lazy" decoding="async" width="1122" height="1600" />
+            <div class="pillar__body">
+              <h3>Honest</h3>
+              <p>Automatic movement, solid steel, no shortcuts, no marketing theatre. A watch you can hand on.</p>
+            </div>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section id="commission" class="section commission" aria-labelledby="commission-title">
+      <div class="section__inner commission__inner">
+        <p class="eyebrow">By commission</p>
+        <h2 id="commission-title" class="section__title">For the <em>Serene</em>.</h2>
+        <p class="commission__lede">
+          Four pieces, made for the crew of the LK 297 <em>Serene</em> out of Whalsay — red dials drawn from her hull, oak boxes engraved for the men who own them. Bespoke commissions are the heart of what Haaf is for.
+        </p>
+        <div class="commission__grid">
+          <figure>
+            <img src="assets/photos/serene-watch-fish.jpg" alt="The Serene commission — a red-dial Haaf on the day's catch." loading="lazy" decoding="async" width="1600" height="1066" />
+            <figcaption>The <em>Serene</em> piece — red dial, drawn from her hull.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/serene-boat-coast.jpg" alt="Serene LK 297 entering Shetland waters." loading="lazy" decoding="async" width="1600" height="777" />
+            <figcaption><em>Serene</em> LK 297, Whalsay <span class="commission__credit">— ph. Ivan Reid</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/serene-handover.jpg" alt="An engraved oak Haaf box being handed over to a member of the Serene crew." loading="lazy" decoding="async" width="1600" height="1066" />
+            <figcaption>The handover — a 37%-scale LHD fishbox in oak, engraved per man.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/serene-boat-trawl.jpg" alt="Serene LK 297 working the haaf off the Shetland coast." loading="lazy" decoding="async" width="1600" height="815" />
+            <figcaption>At the haaf <span class="commission__credit">— ph. Ivan Reid</span></figcaption>
+          </figure>
+        </div>
+        <figure class="commission__band">
+          <img src="assets/photos/serene-crew-set.jpg" alt="Four engraved oak Haaf boxes paired with four navy Haaf caps, laid out for the Serene crew." loading="lazy" decoding="async" width="1600" height="1067" />
+          <figcaption>Four watches. Four boxes. Four caps. One crew.</figcaption>
+        </figure>
+        <p class="commission__cta">
+          Bespoke pieces by enquiry — <a href="mailto:hello@haafwatches.com?subject=Commission%20enquiry">hello@haafwatches.com</a>
+        </p>
       </div>
     </section>
 
     <section id="collection" class="section collection" aria-labelledby="collection-title">
       <div class="section__inner collection__inner">
         <p class="eyebrow">The first collection</p>
-        <h2 id="collection-title" class="section__title">Sixareen No. 01</h2>
-        <p class="collection__lede">
-          Named for the six-oared boats that carried Shetlanders to the haaf. A dive-capable automatic, designed in Lerwick, assembled in small numbers.
-        </p>
-        <dl class="specs">
-          <div><dt>Case</dt><dd>40mm brushed steel</dd></div>
-          <div><dt>Movement</dt><dd>Swiss automatic</dd></div>
-          <div><dt>Crystal</dt><dd>Domed sapphire, AR-coated</dd></div>
-          <div><dt>Water resistance</dt><dd>200m / 20 ATM</dd></div>
-          <div><dt>Lume</dt><dd>Super-LumiNova® BGW9</dd></div>
-          <div><dt>Strap</dt><dd>Oiled leather · woven nylon</dd></div>
-        </dl>
+        <h2 id="collection-title" class="section__title">Pelagic</h2>
+        <div class="collection__feature">
+          <img src="assets/photos/black-flatlay-ice.jpg" alt="The Pelagic, black dial, on ice." loading="lazy" decoding="async" width="1067" height="1600" />
+          <div>
+            <p class="collection__lede">
+              A working diver, drawn from the haaf. Compass-rose bezel, brass-tipped lume, full steel bracelet — sized to the wrist of someone who pulls ropes for a living.
+            </p>
+            <dl class="specs">
+              <div><dt>Case</dt><dd>40mm brushed steel</dd></div>
+              <div><dt>Movement</dt><dd>Automatic</dd></div>
+              <div><dt>Crystal</dt><dd>Domed sapphire, AR-coated</dd></div>
+              <div><dt>Bezel</dt><dd>Compass rose, sixteen points</dd></div>
+              <div><dt>Water resistance</dt><dd>200m / 20 ATM</dd></div>
+              <div><dt>Bracelet</dt><dd>Brushed steel, screw-pin</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="collection__alt">
+          <img src="assets/photos/blue-lichen.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1067" />
+          <div class="collection__alt-copy">
+            <strong>Also in midnight blue</strong>
+            <p>Same case, sunburst blue dial, white compass bezel.</p>
+          </div>
+        </div>
         <p class="collection__note">Full specification and pricing at launch.</p>
       </div>
     </section>
@@ -156,7 +213,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Progressive enhancement for the waitlist form: only hijack if Formspree URL is set.
     const form = document.querySelector('.waitlist__form');
     const msg = form?.querySelector('.waitlist__msg');
     if (form && !form.action.includes('your-form-id')) {
@@ -181,7 +237,6 @@
         }
       });
     } else if (form) {
-      // No backend yet — fall back to mailto so the CTA still works.
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = form.email.value.trim();
